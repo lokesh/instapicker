@@ -1,0 +1,109 @@
+// TODO: have text and/or bg cycle color
+@import compass/reset
+@import compass/css3 
+@import compass/utilities/general/clearfix
+@import compass/typography
+
+$color: #fff
+$bg: #000
+
+// 
+// TYPOGRAPHY
+// 
+@font-face
+  font-family: 'avenir'
+  src: url('../fonts/avenir-roman.eot')
+  src: url('../fonts/avenir-roman.eot?#iefix') format('embedded-opentype'), url('../fonts/avenir-roman.woff') format('woff'), url('../fonts/avenir-roman.ttf') format('truetype'), url('../fonts/avenir-roman.svg#avenir-roman') format('svg')
+  font-weight: normal
+  font-style: normal
+
+body
+  font-family: 'avenir', Helvetica, Arial, sans-serif
+  background: $bg
+  color: $color
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  line-height: 1.4em
+
+h1
+  font-size: 128px
+
+h2
+  font-size: 48px
+
+h3
+  font-size: 32px
+
+label,
+input,
+button,
+select,
+textarea
+  font-family: 'avenir', Helvetica, Arial, sans-serif
+  outline: 0
+
+li
+  list-style: none
+
+//
+// SPLASH
+//    
+.splash
+  position: absolute
+  margin-top: 10%
+  width: 100%
+  text-align: center
+
+
+//
+// SEARCH
+//    
+.search
+  position: absolute
+  margin-top: 10%
+  width: 100%
+  text-align: center
+  input
+    font-size: 64px
+    color: $color
+    background: $bg
+    border: none
+    border-bottom: 2px solid $color
+  button
+    font-size: 64px
+
+
+//
+// GRID
+//    
+.grid
+  text-align: center  
+
+
+//
+// DETAIL
+//    
+.detail
+  text-align: center  
+
+
+//
+// FAVES
+//    
+.faves
+  text-align: center  
+
+
+//
+// EDITOR
+//    
+// .editor
+//   text-align: center  
+
+
+// 
+// UTILITY
+// 
+.hidden
+  display: none
