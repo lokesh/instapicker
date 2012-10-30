@@ -117,7 +117,7 @@ li {
 /* line 52, sass/main.sass */
 .splash {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 20%;
   width: 100%;
   text-align: center;
 }
@@ -125,7 +125,7 @@ li {
 /* line 62, sass/main.sass */
 .search {
   position: absolute;
-  margin-top: 10%;
+  margin-top: 20%;
   width: 100%;
   text-align: center;
 }

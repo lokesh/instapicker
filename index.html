@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/main.css">
 
         <script src="js/vendor/modernizr-2.6.1.min.js"></script>
+
     </head>
     <body>
 
@@ -28,8 +29,10 @@
         <!-- SEARCH -->
         <!--        -->
         <section id="search" class="search hidden">
-            <input type="text" class="input" />
-            <button class="button">Press enter</button>
+            <form class="search-form">
+                <input type="text" class="input" />
+                <button class="button">Press enter</button>
+            </form>
         </section>
 
 
@@ -38,7 +41,7 @@
         <!--      -->
         <section id="grid" class="grid hidden">
             <ul data-bind="foreach: searchResults">
-                <li data-bind="text: $data"></li>
+                <li data-bind="text: title"></li>
             </ul>
         </section>
 
@@ -50,7 +53,7 @@
 <!--             <ul data-bind="foreach: faves">
                 <li data-bind="text: $data"></li>
             </ul>
- -->        </section>
+ -->    </section>
 
 
         <!--        -->
@@ -61,12 +64,23 @@
         </section>
 
 
+
         <script src="js/vendor/jquery-1.8.2.min.js"></script>
         <script src="js/vendor/knockout-2.1.0.js"></script>
         <script src="js/vendor/sammy.js"></script>
         <script src="js/vendor/state-machine.min.js"></script>
 
+        <script src="js/routes.js"></script>
+        <script src="js/viewmodel.js"></script>
+        <script src="js/model.js"></script>
+        <script src="js/statemachine.js"></script>
 
+        <script src="js/modules/splash.js"></script>
+        <script src="js/modules/search.js"></script>
+        <script src="js/modules/grid.js"></script>
+        <!--<script src="js/modules/faves.js"></script>
+        <script src="js/modules/detail.js"></script>-->
+        
         <script src="js/main.js"></script>
 
 <!--        <script>
