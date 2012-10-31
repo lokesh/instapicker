@@ -10,6 +10,7 @@ $(document).ready( function() {
     });
 
     this.get('#search/:query', function() {
+      grid.clearThumbs();
       model.flickrSearch( this.params.query );
       state.gotoSearchResults();
     });

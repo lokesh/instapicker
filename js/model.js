@@ -24,6 +24,7 @@ var model = function(){
     function(data) {
       if(data.stat == "ok") {
         viewModel.searchResults( data.photos.photo );
+        grid.createThumbs( data.photos.photo );
       }
     });
 

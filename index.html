@@ -45,7 +45,7 @@
             <section id="faves" class="faves">
                 <ul data-bind="foreach: faves">
                     <li class="thumb-box">
-                        <img class="thumb" data-bind="attr: { src: url_q }" />
+                        <img class="thumb" data-bind="attr: { src: url_q }"/>
                     </li>
                 </ul>
             </section>
@@ -57,10 +57,11 @@
             </section>
             
             <section id="grid" class="grid">
-                <ul data-bind="foreach: searchResults">
-                    <li class="thumb-box">
-                        <img class="thumb" data-bind="attr: { src: url_q }" />
+                <ul class="grid-list" >
+<!--                    <li class="thumb-box">
+                        <img class="thumb" data-bind="attr: { src: url_q }" onload="javascript: $(this).fadeIn('slow')" />
                     </li>
+    -->
                 </ul>
             </section>
                 

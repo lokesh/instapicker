@@ -115,11 +115,18 @@ li
       background: #333
       overflow: hidden
       border: 5px solid $bg
+      position: relative
+      top: 10px 
+      +opacity( 0 )
+      +transition( opacity 0.6s, top 0.6s)
       &:hover
         border-color: #2d2
       .thumb
         width: 100%
         height: 100%
+      &.slideUp
+        +opacity( 1 )
+        top: 0
   &.showFaves
     .history
       margin-left: $favesWidth
