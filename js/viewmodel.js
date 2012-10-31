@@ -1,6 +1,7 @@
 var viewModel = {
-  searchHistory: ko.observable(),
+  searchHistory: ko.observableArray(),
   searchResults: ko.observableArray(),
+  faves: ko.observableArray(),
   chosenImageData: ko.observable( '[CHOSEN IMAGE DATA]' )
 };
 

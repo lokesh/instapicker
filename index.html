@@ -18,7 +18,7 @@
         <!--        -->
         <!-- SPLASH -->
         <!--        -->
-        <section id="splash" class="splash hidden">
+        <section id="splash" class="splash off">
             <h1>Instapicker</h1>
             <h2>Find images fast. 100% free to use.</h2>
             <h3>Start typing to search.</h3>
@@ -28,38 +28,49 @@
         <!--        -->
         <!-- SEARCH -->
         <!--        -->
-        <section id="search" class="search hidden">
+        <section id="search" class="search off">
             <form class="search-form">
                 <input type="text" class="input" />
                 <button class="button">Press enter</button>
             </form>
+            <div class="overlay"></div>
         </section>
 
 
-        <!--      -->
-        <!-- GRID -->
-        <!--      -->
-        <section id="grid" class="grid hidden">
-            <ul data-bind="foreach: searchResults">
-                <li data-bind="text: title"></li>
-            </ul>
-        </section>
+        <!--                -->
+        <!-- SEARCH RESULTS -->
+        <!--                -->
+        <div id="search-results" class="search-results off" data-bind="css: { showFaves: faves().length > 0  }">
 
-
-        <!--       -->
-        <!-- FAVES -->
-        <!--       -->
-        <section id="faves" class="faves hidden">
-<!--             <ul data-bind="foreach: faves">
-                <li data-bind="text: $data"></li>
-            </ul>
- -->    </section>
+            <section id="faves" class="faves">
+                <ul data-bind="foreach: faves">
+                    <li class="thumb-box">
+                        <img class="thumb" data-bind="attr: { src: url_q }" />
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="history">
+                <ul data-bind="foreach: searchHistory">
+                    <li class="query" data-bind="text: $data"></li>
+                </ul>
+            </section>
+            
+            <section id="grid" class="grid">
+                <ul data-bind="foreach: searchResults">
+                    <li class="thumb-box">
+                        <img class="thumb" data-bind="attr: { src: url_q }" />
+                    </li>
+                </ul>
+            </section>
+                
+        </div>
 
 
         <!--        -->
         <!-- DETAIL -->
         <!--        -->
-        <section id="detail" class="detail hidden">
+        <section id="detail" class="detail off">
             <div data-bind="text: chosenImageData"> </div>
         </section>
 
@@ -75,10 +86,15 @@
         <script src="js/model.js"></script>
         <script src="js/statemachine.js"></script>
 
-        <script src="js/modules/splash.js"></script>
+
+        <!--<script src="js/flickrimage.js"></script>-->
+
+<!--        <script src="js/modules/splash.js"></script>-->
+        <script src="js/modules/searchresults.js"></script>
         <script src="js/modules/search.js"></script>
         <script src="js/modules/grid.js"></script>
-        <!--<script src="js/modules/faves.js"></script>
+        <script src="js/modules/faves.js"></script>
+        <!--
         <script src="js/modules/detail.js"></script>-->
         
         <script src="js/main.js"></script>

@@ -7,12 +7,11 @@ $(document).ready( function() {
     
     this.get('#search', function() {
       state.gotoSearch();
-      // Show search input
     });
 
     this.get('#search/:query', function() {
-      model.getSearchResults( this.params.query );
-      state.gotoGrid();
+      model.flickrSearch( this.params.query );
+      state.gotoSearchResults();
     });
 
     this.get('#image/:imageId', function() {
