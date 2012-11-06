@@ -20,7 +20,7 @@
         <!--        -->
         <section id="splash" class="splash off">
             <h1>Instapicker</h1>
-            <h2>Find images fast. 100% free to use.</h2>
+            <!--<h2>Find images fast. All images 100% free to use.</h2>-->
             <h3>Start typing to search.</h3>
         </section>
 
@@ -49,20 +49,19 @@
                     </li>
                 </ul>
             </section>
-            
+
             <section class="history">
-                <ul data-bind="foreach: searchHistory">
+                <ul data-bind="template: { foreach: searchHistory, beforeRemove: slideOutHistory, afterAdd: slideInHistory }">
                     <li class="query" data-bind="text: $data"></li>
                 </ul>
             </section>
             
             <section id="grid" class="grid">
-                <ul class="grid-list" >
-<!--                    <li class="thumb-box">
-                        <img class="thumb" data-bind="attr: { src: url_q }" onload="javascript: $(this).fadeIn('slow')" />
+                <ul class="grid-list">
+<!--                     <li class="thumb-box">
+                        <img class="thumb" data-bind="attr: { src: url_q }" />
                     </li>
-    -->
-                </ul>
+ -->                </ul>
             </section>
                 
         </div>
@@ -82,11 +81,10 @@
         <script src="js/vendor/sammy.js"></script>
         <script src="js/vendor/state-machine.min.js"></script>
 
-        <script src="js/routes.js"></script>
         <script src="js/viewmodel.js"></script>
         <script src="js/model.js"></script>
         <script src="js/statemachine.js"></script>
-
+        <!--<script src="js/sound.js"></script>-->
 
         <!--<script src="js/flickrimage.js"></script>-->
 
@@ -99,6 +97,9 @@
         <script src="js/modules/detail.js"></script>-->
         
         <script src="js/main.js"></script>
+
+        <script src="js/routes.js"></script>
+
 
 <!--        <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

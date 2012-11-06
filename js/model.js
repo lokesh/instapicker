@@ -3,7 +3,7 @@ var model = function(){
   var api_key       = '35f75d12300141f235577c2f742bd308',
       sort          = "relevance",  // options: relevance, interestingness-desc, date-posted-desc, ...
       license       = "4,5,6,7,8",  // free to use, even commercially
-      perPage       = 21;
+      perPage       = 14;
 
   
   var flickrSearch = function( query, callback ){

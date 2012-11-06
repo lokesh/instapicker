@@ -9,31 +9,6 @@ var grid = function() {
       viewModel.faves.push( ko.dataFor(this) );
     });
 
-//    $element.find('.thumb').attr('onload', 'console.log("haha")');
-    
-    // $('.img')
-
-
-// var imgEl = $('<img>', {
-//     id: 'thumb-' + id,
-//     'class': 'thumb',
-//     src: image.getUrl('m'),
-//     load: function() {
-//             var el = $(this);
-    // $('img').load( function( event ){
-    //   console.log('dfmdf');
-    // });
-
-// var imgEl = $('<img>', {
-//     id: 'thumb-' + id,
-//     'class': 'thumb',
-//     src: image.getUrl('m'),
-//     load: function() {
-//             var el = $(this);
-    // $('img').load( function( event ){
-    //   console.log('dfmdf');
-    // });
-
   };
 
   var createThumbs = function( photos ){
@@ -59,13 +34,11 @@ var grid = function() {
             .delay( 5, 'slideUp' ).queue( 'slideUp', function( event ){
               $(this).addClass('slideUp');
             }).dequeue( 'slideUp' );
-
       
         }
       });
 
       var thumb = li.append( img );
-//      $gridL.append( thumb );
 
     });
   };

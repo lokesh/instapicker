@@ -19,7 +19,7 @@ var state = StateMachine.create({
       $('body').on( 'keydown', function( event ){
         // TODO: Test further. This conditional to check if key pressed was alphanumeric might not be bulletproof.
         if(event.keyCode >= 48 && event.keyCode <= 90) {
-          location.hash = "search";
+          location.hash = "!/search";
         }
       });
     },
@@ -44,7 +44,7 @@ var state = StateMachine.create({
 
       $('body').on( 'keydown', function( event ){
         if(event.keyCode >= 48 && event.keyCode <= 90) {
-          location.hash = "search";
+          location.hash = "!/search";
         }
       });
 

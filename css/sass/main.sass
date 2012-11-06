@@ -93,6 +93,7 @@ li
   position: absolute
   top: 0
   left: 0
+  
   .history
     +pie-clearfix
     margin-bottom: 20px
@@ -102,8 +103,16 @@ li
       font-size: 48px
       color: #777       
       margin: 0 15px 0 5px
+      position: relative
+      top: -20px
+      +opacity( 0 )
+      +transition( opacity 0.6s, top 0.6s)      
       &:first-of-type
         color: $color
+      &.slideDown
+        +opacity( 1 )
+        top: 0
+
   .grid
     +transition( margin 0.6s cubic-bezier(0.175, 0.885, 0.440, 1.125) )
     margin-right: 160px
@@ -116,7 +125,7 @@ li
       overflow: hidden
       border: 5px solid $bg
       position: relative
-      top: 10px 
+      top: 20px 
       +opacity( 0 )
       +transition( opacity 0.6s, top 0.6s)
       &:hover
