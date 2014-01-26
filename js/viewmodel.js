@@ -6,6 +6,7 @@ var viewModel = {
 
   slideInHistory: function( elem ){
     if( elem.nodeType === 1 ){
+      // TODO: ADD COMMENTS!!
       $(elem).delay( 5, 'slideDown' ).queue( 'slideDown', function( event ){
         $(this).addClass('slideDown');
       }).dequeue( 'slideDown' );

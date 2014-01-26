@@ -46,3 +46,5 @@ function playSound( buffer ) {
 }
 
 loadSound( url );
+
+playSound( soundBuffer );
