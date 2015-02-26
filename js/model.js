@@ -10,7 +10,7 @@ var model = function(){
 
     viewModel.searchHistory.unshift( query );
     
-    $.getJSON('http://api.flickr.com/services/rest/?jsoncallback=?', {
+    $.getJSON('https://api.flickr.com/services/rest/?jsoncallback=?', {
       method: "flickr.photos.search",
       api_key: api_key,
       text: query,
